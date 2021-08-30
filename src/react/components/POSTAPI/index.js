@@ -17,11 +17,11 @@ const POSTAPI = (props) => {
 
     const onFinish = (e) => {
         axios.post("https://admin.srkprojects.com/web/api/client/v1/contact-us/", e)
+        props.setModalVisible(false)
     };
 
     const modalSubmit = () => {
         form.submit()
-        props.setModalVisible(false)
     }
 
     return (
